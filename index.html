@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+    <script src="js.js"></script>
+    <script src="datepicker.js"></script>
+    <link rel="stylesheet" href="./css/datepicker.material.css">
+    <link rel="stylesheet" id="style" href="./css/pink.css">
+
+</head>
+<body>
+<noscript>
+    <div style="position: fixed; top: 0; left: 0; z-index: 3000;
+                height: 100%; width: 100%; background-color: #FFFFFF">
+        <div style="position: relative;
+                height: 200px; width: 200px; margin:0 auto; top:20px; "><img alt="hold" src="./css/hold.svg">
+            <p style="margin-top:20px;">JavaScript is not enabled.</p></div>
+    </div>
+</noscript>
+<div id="content">
+    <div id="kanban-zone">
+        <div id="columns">
+            <div class="drop-place-column"></div>
+        </div>
+        <div id="user-menu">
+            <div id="column-adder" class="btn btn-medium btn-green btn-radius">
+                <span>+ Добавить колонку</span>
+            </div>
+            <div id="column-maker">
+                <input type="text" id="new-column-title" maxlength="35" placeholder="Название колонки">
+                <span id="input-error-title"></span>
+                <div>
+                    <label id="make-column" class="btn btn-small btn-green">Добавить</label>
+                    <label id="cancel-column" class="btn btn-small btn-red">Отменить</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cover"></div>
+<div id="modal-window">
+    <div id="modal-close" class="cancel-edit-button"></div>
+    <span id="modal-name">Карточка</span>
+    <div id="modal-content">
+    </div>
+    <div class="more-data">
+        <div class="data"><input type="text" class="change-date" placeholder="Выбрать дату" readonly=true></div>
+        <div class="flag type1 data"></div>
+    </div>
+    <div id="accept-modal-window" class="btn btn-small btn-green">Сохранить</div>
+    <div id="cancel-modal-window" class="btn btn-small btn-red">Отменить</div>
+</div>
+<div id="footer-menu">
+    <div id="trashcan"></div>
+    <div id="column-searcher">
+        <div>
+            <select id="select-theme" class="settings-window">
+                <option selected>PINK</option>
+                <option>DARK</option>
+            </select>
+        </div>
+        <div class="settings"></div>
+        <input type="text" maxlength="35">
+        <div class="cancel-search"></div>
+    </div>
+    <div id="column-adder-footer"></div>
+</div>
+</body>
+</html>
